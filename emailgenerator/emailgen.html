@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Response Generator</title>
+  <link rel="stylesheet" href="emailgen.css">
+</head>     
+<body>
+
+  <div class="container">
+    <div id="moonLine">
+      <button id="themeMoon" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </div>
+    <h2>Email Response Generator</h2>
+    <label for="message">Paste the message here:</label>
+    <textarea id="message" rows="6" placeholder="Enter the message or prompt..."></textarea>
+
+    <label for="emotion">Select Emotion/Tone:</label>
+    <select id="emotion">
+      <option value="" disabled selected>Select</option>
+      <option value="formal">Formal</option>
+      <option value="friendly">Friendly</option>
+      <option value="apologetic">Apologetic</option>
+      <option value="encouraging">Encouraging</option>
+      <option value="professional">Professional</option>
+    </select>
+
+    <label for="language">Select Language:</label>
+    <select id="language">
+      <option value="" disabled selected>Choose language</option>
+      <option value="english">English</option>
+      <option value="hindi">Hindi</option>
+      <option value="german">German</option>
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+    </select>
+
+    <button onclick="generateEmail()">Generate Reply</button>
+
+    <h3>Generated Response:</h3>
+    <textarea id="output" rows="6" placeholder="response..."></textarea>
+
+    <button id="copy" onclick="copyToClipboard()">Copy To Clipboard</button>
+
+    <button id="sendEmailBtn">Send via Email</button>
+
+  </div>
+
+  <script src="emailgen.js"></script>  
+</body>
+</html>
